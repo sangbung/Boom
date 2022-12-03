@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="public/stylesheet/style.css")
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap")
+        title Document
+    body 
+        h1 Boom 
+        video#myFace(autoplay, playsinline, width="400", height="400") 
+        button#mute Mute 
+        button#camera Turn Camera Off 
+        Select#cameraSelect
+
+        script(src="/socket.io/socket.io.js") 
+        script(src="/public/js/app.js") 
+        
