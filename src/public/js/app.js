@@ -5,9 +5,11 @@ const camera = document.querySelector("#camera")
 const cameraSelect = document.querySelector("#cameraSelect");
 
 
+
 let myStream;
 let muted = false;
 let cameraOff = false;
+
 
 
 async function getCamera(){
@@ -31,7 +33,7 @@ async function getCamera(){
 async function getMedia(deviceId){
     const initialConstraint = {
         audio:true,
-        vedio:{ facingMode : "user" }
+        video:{facingMode : "user"}
     }
     const cameraConstraint = {
         audio:true,
@@ -49,7 +51,6 @@ async function getMedia(deviceId){
         console.log(error);
     }
 }
-getMedia();
 
 const handleMuteBtn = () => {
     myStream.getAudioTracks().forEach(track => track.enabled = !track.enabled);
@@ -82,3 +83,28 @@ async function handleCameraSelect(){
 mute.addEventListener("click",handleMuteBtn);
 camera.addEventListener("click",handleCameraBtn);
 cameraSelect.addEventListener("input",handleCameraSelect);
+
+
+const room = document.querySelector("#room");
+const call = document.querySelector("#chat");
+const roomForm = room.querySelector("form");
+
+call.hidden = true;
+
+let roomName;
+
+async function initCall(){
+    room.hidden = true;
+    call.hidden = false;
+    await getMedia();
+}
+
+async function handelRoomForm(event){
+    event.preventDefault();
+    const input = roomForm.querySelector("input");
+    await initCall();
+    roomName = input.value;
+    input.value = "";
+}
+
+roomForm.addEventListener("submit",handelRoomForm);

@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="ko")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -10,11 +10,24 @@ html(lang="en")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap")
         title Document
     body 
-        h1 Boom 
-        video#myFace(autoplay, playsinline, width="400", height="400") 
-        button#mute Mute 
-        button#camera Turn Camera Off 
-        Select#cameraSelect
+        div
+            nav 
+                ul.nav-content
+                    li.nav-item 
+                        a(href="home.pug") 나가기
+                    li.nav-item 
+                        a(href="#") 설정
+        
+        div#room
+            form
+                input(type="text" required spaceholder="enter room name")
+                button enter room 
+        div#chat 
+            h1 Boom 
+            video#myFace(autoplay, playsinline, width="400", height="400") 
+            button#mute Mute 
+            button#camera Turn Camera Off 
+            Select#cameraSelect
 
         script(src="/socket.io/socket.io.js") 
         script(src="/public/js/app.js") 
