@@ -2,32 +2,60 @@ body{
     background-color: black;
     color: white;
     font-family: 'Snowburst One', cursive;
-    align-items: center;
     text-align: center;
-    justify-content: center;
-    margin: 0;
-}
-
-div{
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.nav-container{
-    width: 100%;
     margin: 0;
     padding: 0;
-    list-style-type: none;
+}
+
+#room{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 300px;
+    margin: -150px 0px 0px -200px;
+    justify-content: center;
+    padding: 5px;
+}
+
+#room form input{
+    margin: 10px;
+}
+
+.nav-bar{
+    float: left;
+    background-color: #404040;
+    width: 100%;
+    display: inline-block;
 }
 
 .nav-item{
+    list-style-type: none;
     float: left;
+    margin: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .nav-item a{
-    text-align: center;
     text-decoration: none;
     color: white;
-    display: block;
+}
+.nav-bar-bottom{
+    background-color: #404040;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+
+#chat button{
+    width: 150px;
+    height: max-content;
+}
+
+#chat .nav-content{
+    display: flex;
+    padding: 0;
+    margin: 0;
 }
