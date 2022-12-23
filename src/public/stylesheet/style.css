@@ -5,7 +5,19 @@ body{
     text-align: center;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
+.wrap{
+    display: grid;
+    grid-template-columns: 5 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+}
+.one{
+    grid-column: 1;
+    grid-row: 1;
+}
+
 
 #room{
     position: absolute;
@@ -23,7 +35,6 @@ body{
 }
 
 .nav-bar{
-    float: left;
     background-color: #404040;
     width: 100%;
     display: inline-block;
@@ -33,14 +44,20 @@ body{
     list-style-type: none;
     float: left;
     margin: 10px;
-    margin-top: 0;
-    margin-bottom: 15px;
+    text-align: center;
 }
 
 .nav-item a{
     text-decoration: none;
     color: white;
 }
+
+.footer{
+    margin: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
 .nav-bar-bottom{
     background-color: #404040;
     width: 100%;

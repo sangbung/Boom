@@ -9,33 +9,34 @@ html(lang="ko")
         link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap")
         title Document
-    body 
-        header 
-            div#room
-                form#roomEnter
-                    input(type="text" required spaceholder="enter room name")
-                    button enter room 
-        main
-            div#chat 
-                nav.nav-bar
-                    ul.nav-content
-                        li.nav-item 
-                            a(href="home.pug") 나가기
-                        li.nav-item 
-                            a(href="#") 설정
-                div.video        
-                    video#myFace(autoplay, playsinline, width="400", height="400")
-                div.videoPerson
-                    
-        footer   
-            nav.nav-bar 
-                ul.nav-content 
-                    li.nav-item
-                        button#mute Mute 
-                    li.nav-item
-                        button#camera Turn Camera Off 
-                    li.nav-item
-                        Select#cameraSelect
+    body
+        div.wrap
+            header.one 
+                div#room
+                    form#roomEnter
+                        input(type="text" required spaceholder="enter room name")
+                        button enter room 
+            main.one.vedio_wrap
+                div#chat 
+                    nav.nav-bar
+                        ul.nav-content
+                            li.nav-item 
+                                a(href="home.pug") 나가기
+                            li.nav-item 
+                                a(href="#") 설정
+                    div.video        
+                        video#myFace(autoplay, playsinline, width="700", height="450")
+                    div.videoPerson
+                        
+            footer   
+                nav.nav-bar 
+                    ul.nav-content 
+                        li.nav-item.footer
+                            button#mute Mute 
+                        li.nav-item.footer
+                            button#camera Turn Camera Off 
+                        li.nav-item.footer
+                            Select#cameraSelect
         script(src="/socket.io/socket.io.js") 
         script(src="/public/js/app.js") 
         

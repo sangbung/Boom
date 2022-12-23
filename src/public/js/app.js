@@ -88,13 +88,15 @@ cameraSelect.addEventListener("input",handleCameraSelect);
 const room = document.querySelector("#room");
 const call = document.querySelector("#chat");
 const roomForm = room.querySelector("form");
-
+const footer = document.querySelector("footer");
+footer.hidden = true;
 call.hidden = true;
 
 let roomName;
 
 async function initCall(){
     room.hidden = true;
+    footer.hidden = false;
     call.hidden = false;
     await getMedia();
 }
