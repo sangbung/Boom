@@ -25,16 +25,20 @@ html(lang="ko")
                             li.nav-item 
                                 a(href="#") 설정
                     div.video        
-                        video#myFace(autoplay, playsinline, width="700", height="450")
+                        video#myFace(autoplay, playsinline, width="700", height="400")
                     div.videoPerson
-                        
+                        video#myFace(autoplay,playsinline,width="200",height="150")
+                        video#myFace(autoplay,playsinline,width="200",height="150")
+                        video#myFace(autoplay,playsinline,width="200",height="150")
+                        video#myFace(autoplay,playsinline,width="200",height="150")
+                        video#myFace(autoplay,playsinline,width="200",height="150") 
             footer   
                 nav.nav-bar 
                     ul.nav-content 
                         li.nav-item.footer
                             button#mute Mute 
                         li.nav-item.footer
-                            button#camera Turn Camera Off 
+                            button#camera Camera Off 
                         li.nav-item.footer
                             Select#cameraSelect
         script(src="/socket.io/socket.io.js") 

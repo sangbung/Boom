@@ -68,11 +68,11 @@ const handleCameraBtn =() => {
     myStream.getVideoTracks().forEach(track => track.enabled = !track.enabled);
     if(!cameraOff){
         cameraOff = true;
-        camera.innerHTML = 'Turn Camera On';
+        camera.innerHTML = 'Camera On';
     }
     else{
         cameraOff = false;
-        camera.innerHTML = 'Turn Camera Off';
+        camera.innerHTML = 'Camera Off';
     }
 }
 
